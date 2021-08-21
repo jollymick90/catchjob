@@ -1,6 +1,6 @@
 import { Resume } from "../models/Resume";
 
-const resume: Resume = {
+const resumeSample: Resume = {
     generic: {
         name: "Mihaela Oana",
         whoiam: "Best Employ who every Boss desire",
@@ -31,4 +31,4 @@ const resume: Resume = {
     experiences:[]
 }
 
-export default resume;
+export default resumeSample;
