@@ -31,18 +31,19 @@ export interface MySocial extends PrivacyData {
 }
 
 export interface MyAboutMe extends PrivacyData {
-    word?: SDString,
+    word: SDString,
     short?: SDString,
     medium?: SDString,
     long?: SDString
 }
 
 export interface MyInfo {
-    name: SDString,
+    name: string,
     lastname: SDString,
     surname: SDString,
     contact: MyContact,
     aboutMe: MyAboutMe,
+    whoiam: string,
 
     nationality?: SDString,
     social?: MySocial,
