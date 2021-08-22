@@ -2,8 +2,8 @@
 import React from 'react';
 
 import './App.css';
-import BasicContainer from './modules/views/basic/BasicContainer';
-import ResumeStyle from './modules/views/resumestyle/ResumeStyle';
+import BasicContainer from './modules/layouts/basic/BasicContainer';
+import ResumeStyle from './modules/layouts/resumestyle/ResumeStyle';
 import resumeSample from './static/sample';
 
 
