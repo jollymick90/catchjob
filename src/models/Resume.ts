@@ -7,6 +7,6 @@ export interface Resume {
     generic: MyInfo,
     skills: Skill[],
     jobs: Job[],
-    educations: Education[]
+    educations: Education[],
     experiences: Experience[]
 }
