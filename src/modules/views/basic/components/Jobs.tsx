@@ -1,4 +1,5 @@
 import { Job } from "../../../../models/Skill";
+import BasicJob from "./job/BasicJob";
 
 export interface JobsProps {
     jobs: Job[]
@@ -9,7 +10,9 @@ const Jobs = ({ jobs }: JobsProps) => {
     return (
         <>
             <div>
-                Jobs
+                {
+                    jobs.map(job => <BasicJob job={job}></BasicJob>)
+                }
             </div>
         </>
     )

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { SDNumber, SDString } from "../../../../../models/Generic";
-import WrapPrivacyData from "../../../../web-components/privacy/WrapPrivacyData";
+import PrivContainer from "../../../../web-components/privacy/PrivContainer";
 
 export interface InfoDataProps {
     data: SDString | SDNumber | string | number,
-    // value?: string | number,
+
     children?: React.ReactNode | undefined,
     customClass?: string,
     overwrite?: boolean
@@ -12,33 +12,18 @@ export interface InfoDataProps {
 
 const InfoData = (props: InfoDataProps) => {
 
-    const [ data ] = useState((props.data && typeof props.data ==="object") ? props.data.value : props.data);
-    
-
-    const PrivContainer = (privProp: any) => {
-        const privacyData = (props.data && typeof props.data ==="object") ? (props.data as SDString | SDNumber) : null;
-        return (
-            privacyData ? 
-                <WrapPrivacyData data={privacyData}>
-                    { privProp.children }
-                </WrapPrivacyData> : 
-                <>
-                    { privProp.children }
-                </>
-        )
-    }
+    const [data] = useState((props.data && typeof props.data === "object") ? props.data.value : props.data);
 
     return (
         <>
             {
-                <PrivContainer>
+                <PrivContainer data={props.data}>
                     <div className="border-2 border-gray-200 ">
                         {
                             data
                         }
                     </div>
                 </PrivContainer>
-
             }
         </>
     )

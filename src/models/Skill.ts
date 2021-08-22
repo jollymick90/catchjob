@@ -1,27 +1,32 @@
 import { PrivacyData, RAddress, SDNumber, SDString } from "./Generic";
 
+export interface MainSkill extends Skill {    
+    jobs?: string[]
+}
+
 export interface Skill extends PrivacyData {
     name: string,
-    value: number,
-    maxValue: number,
-    job?: number
+    value?: number,
+    maxValue?: number
 }
 
 export interface JobTime {
-    dateFrom: string,
-    dateTo: string,
+    dateFrom?: string,
+    dateTo?: string,
     format?: string,
     yearMonthFrom?: string,
     yearMontTo?: string
 }
 
 export interface Job extends PrivacyData {
-    titleCompany: SDString,
-    titleMainJobDescription: SDString,
-    skills: Skill[],    
-    period: JobTime,
+    name: string,
+    description?: SDString,
+    titleCompany?: SDString,
+    skills?: Skill[],    
+    period?: JobTime,
     order?: number,
-    diary?: PostBlogJob[]
+    diary?: PostBlogJob[],
+    idJob?: string,
 }
 
 export interface PostBlogJob extends PrivacyData {

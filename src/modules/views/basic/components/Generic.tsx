@@ -1,5 +1,7 @@
 import { MyInfo } from "../../../../models/Generic";
-import WrapPrivacyData from "../../../web-components/privacy/WrapPrivacyData";
+import BasicAboutMe from "./generic/BasicAboutMe";
+import BasicMyContact from "./generic/BasicMyContact";
+
 import InfoData from "./generic/InfoData";
 
 export interface GenericProp {
@@ -16,6 +18,9 @@ const Generic = ({ myInfo }: GenericProp) => {
                 <InfoData data={myInfo.lastname}/>
                 <InfoData data={myInfo.surname}/>
                 
+                <BasicMyContact data={myInfo.contact}></BasicMyContact>
+                
+                <BasicAboutMe data={myInfo.aboutMe}></BasicAboutMe>
 
             </div>
         </>
