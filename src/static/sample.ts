@@ -2,7 +2,7 @@ import { Resume } from "../models/Resume";
 
 const resumeSample: Resume = {
     style: {
-        container: "m"
+        container: "business"
     },
     generic: {
         name: "Mihaela Oana",

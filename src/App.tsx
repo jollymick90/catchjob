@@ -1,19 +1,14 @@
 
-import React from 'react';
-
 import './App.css';
-import BasicContainer from './modules/layouts/basic/BasicContainer';
-import ResumeStyle from './modules/layouts/resumestyle/ResumeStyle';
-import resumeSample from './static/sample';
 
+import RNavigation from './modules/navigation/RNavigation';
 
 function App() {
   return (
 
     <div className="App h-full">
 
-      
-      <ResumeStyle />
+      <RNavigation />
     
     </div>
   );

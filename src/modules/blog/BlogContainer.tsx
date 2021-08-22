@@ -6,6 +6,7 @@ const BlogContainer = (props: BlogContainerProps) => {
 
     return (
         <>
+            BlogContainer
             {props.children}
         </>
     )
