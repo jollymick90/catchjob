@@ -1,8 +1,8 @@
 import { Resume } from "../../../models/Resume"
-import Educations from "../common/Educations"
-import Generic from "../common/Generic"
-import Jobs from "../common/Jobs"
-import Skills from "../common/Skills"
+import Educations from "./components/Educations"
+import Generic from "./components/Generic"
+import Jobs from "./components/Jobs"
+import Skills from "./components/Skills"
 
 export interface BasicContainerProp {
     resume: Resume

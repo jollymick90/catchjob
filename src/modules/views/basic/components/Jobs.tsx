@@ -1,4 +1,4 @@
-import { Job } from "../../../models/Skill";
+import { Job } from "../../../../models/Skill";
 
 export interface JobsProps {
     jobs: Job[]

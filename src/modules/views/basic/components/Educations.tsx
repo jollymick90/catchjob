@@ -1,4 +1,4 @@
-import { Education } from "../../../models/Skill";
+import { Education } from "../../../../models/Skill";
 
 export interface EducationsProps {
     educations: Education[]

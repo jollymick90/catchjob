@@ -8,7 +8,7 @@ const resumeSample: Resume = {
             value: "Dumitrache" 
         },
         surname: { 
-            value: "Dumitrache" 
+            value: "Dumi Dumi" 
         },
         contact: {
             email: { 
