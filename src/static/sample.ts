@@ -1,6 +1,9 @@
 import { Resume } from "../models/Resume";
 
 const resumeSample: Resume = {
+    style: {
+        container: "m"
+    },
     generic: {
         name: "Mihaela Oana",
         whoiam: "Best Employ who every Boss desire",
