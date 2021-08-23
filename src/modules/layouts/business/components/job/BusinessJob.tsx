@@ -1,4 +1,4 @@
-import { Job } from "../../../../../models/Skill";
+import { Job, Skill } from "../../../../../models/Skill";
 import BusinessSpan from "../commons/BusinessSpan";
 
 export interface BusinessJobProps {
@@ -7,10 +7,38 @@ export interface BusinessJobProps {
 }
 const BusinessJob = (props: BusinessJobProps) => {
 
+    const JobSkill = ({ jobSkill }: { jobSkill: Skill }) => {
+        return (
+            <> 
+                
+                <li className="text-left">
+                    {
+                        jobSkill.name
+                    }
+                </li>
+                
+            </>
+        )
+    }
+
+    const JobSkills = () => {
+
+        return (
+            props.job.skills ?
+                <ul className="list-disc">
+                    {
+                        props.job.skills.map(skill => <JobSkill jobSkill={skill} />)
+                    }
+                </ul>
+                : <></>
+
+        )
+    }
     return (
-        <>                                
+        <>
             <BusinessSpan>
-                {props.job.name}
+                <div className="text-left mb-2 font-medium">{props.job.name}</div>
+                <JobSkills />
             </BusinessSpan>
         </>
     )

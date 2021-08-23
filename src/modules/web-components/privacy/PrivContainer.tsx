@@ -1,7 +1,7 @@
-import { SDNumber, SDString } from "../../../models/Generic";
+import { SDArrayString, SDNumber, SDString } from "../../../models/Generic";
 import WrapPrivacyData from "./WrapPrivacyData";
 export interface PrivContainerProps {
-    data: SDString | SDNumber | string | number,
+    data?: SDString | SDNumber | SDArrayString | string | number,
     children?: React.ReactNode | undefined
 }
 const PrivContainer = (props: PrivContainerProps) => {

@@ -9,12 +9,10 @@ const BusinessSkill = (props: BusinessSkillProps) => {
 
     return (
         <>
-            <div>
-                
+            <div>                
                 <BusinessSpan>
-                    {props.skill.name}
-                </BusinessSpan>
-                
+                    <div className="text-xl font-semibold">{props.skill.name}</div>
+                </BusinessSpan>                
             </div>
             {props.children}
         </>

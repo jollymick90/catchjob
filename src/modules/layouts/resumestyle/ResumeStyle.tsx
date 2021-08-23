@@ -9,15 +9,15 @@ export interface ResumeStyleProps {
 }
 const ResumeStyle = (props: ResumeStyleProps) => {
 
-    const [ resume ] = useState(resumeSample);
+    const [resume] = useState(resumeSample);
 
 
     let container = <BasicContainer resume={resumeSample} />
-     switch (resume.style.container) {
+    switch (resume.style.container) {
         case "business":
-            container = <BusinessContainer resume={resumeSample} />    
+            container = <BusinessContainer resume={resumeSample} />
             break;
-    
+
         default:
             container = <BasicContainer resume={resumeSample} />
             break;
@@ -25,13 +25,13 @@ const ResumeStyle = (props: ResumeStyleProps) => {
 
     return (
         <>
-    
-        {
-            container
-        }
-        
-        
-        
+            <div className="h-screen">
+                {
+                    container
+                }
+
+            </div>
+
         </>
     )
 }

@@ -6,6 +6,10 @@ export interface SDString extends PrivacyData {
     value: string
 }
 
+export interface SDArrayString extends PrivacyData {
+    value: string[]
+}
+
 export interface SDNumber extends PrivacyData {
     value: number    
 }
@@ -18,7 +22,8 @@ export interface BDay extends PrivacyData {
 export interface RAddress extends PrivacyData {
     city: SDString,
     cap?: SDString,
-    street?: SDString
+    street?: SDString,
+    country?: SDString
 }
 
 export interface MyContact extends PrivacyData {
@@ -34,7 +39,7 @@ export interface MyAboutMe extends PrivacyData {
     word: SDString,
     short?: SDString,
     medium?: SDString,
-    long?: SDString
+    long?: SDArrayString
 }
 
 export interface MyInfo {
