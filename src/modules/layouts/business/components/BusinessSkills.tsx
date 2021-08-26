@@ -8,6 +8,12 @@ export interface BusinessSkillsProps {
 
 const BusinessSkills = ({ skills }: BusinessSkillsProps) => {
 
+    const businessList = skills.map((skill, i) => {
+        const key = `${i}_bms`;
+        const el = <BusinessSkill skill={skill} key={key} k={key}></BusinessSkill>
+        return el
+    });
+
     return (
         <>
             <div>
@@ -17,7 +23,7 @@ const BusinessSkills = ({ skills }: BusinessSkillsProps) => {
                     </span>
                 </div>
                 {
-                    skills.map(skill => <BusinessSkill skill={skill}></BusinessSkill>)
+                    businessList
                 }
             </div>
         </>

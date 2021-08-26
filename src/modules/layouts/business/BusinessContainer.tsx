@@ -4,12 +4,18 @@ import BusinessEducations from "./components/BusinessEducations"
 import BusinessGeneric from "./components/BusinessGeneric"
 import BusinessJobs from "./components/BusinessJobs"
 import BusinessSkills from "./components/BusinessSkills"
+import { ResumeState } from "../../../reducers/resumeReducer"
+import { useSelector } from "react-redux"
+import { useState } from "react"
 
-export interface BusinessContainerProp {
-    resume: Resume
-}
+// export interface BusinessContainerProp {
+//     resume: Resume
+// }
 
-const BusinessContainer = ({ resume }: BusinessContainerProp) => {
+const BusinessContainer = () => {
+    const resState: ResumeState = useSelector((state: any) => state.resume);
+    
+    const [ resume, setResume ] = useState(resState.resume);
 
     return (
         <>

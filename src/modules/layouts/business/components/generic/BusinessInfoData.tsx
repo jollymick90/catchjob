@@ -13,14 +13,17 @@ export interface BusinessInfoDataProps {
 const BusinessInfoData = (props: BusinessInfoDataProps) => {
 
     const [data] = useState((props.data && typeof props.data === "object") ? props.data.value : props.data);
+    
+    const dataNoState = (props.data && typeof props.data === "object") ? props.data.value : props.data;
+    console.log("BusinessInfoData", data, dataNoState)
 
     return (
         <>
             {
-                <PrivContainer data={props.data}>
+                <PrivContainer data={dataNoState}>
                     <div className="border-2 border-gray-200 ">
                         {
-                            data
+                            dataNoState
                         }
                     </div>
                 </PrivContainer>

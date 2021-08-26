@@ -3,14 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { createStore } from 'redux';
 import "./styles/tailwind.generated.css";
 import { BrowserRouter } from 'react-router-dom';
+import rootReducer from './reducers/rootReducer';
+import { Provider } from 'react-redux';
+
+const store = createStore(rootReducer);
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 

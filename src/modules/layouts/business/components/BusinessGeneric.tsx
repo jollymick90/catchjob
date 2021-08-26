@@ -10,21 +10,37 @@ export interface BusinessGenericProp {
 
 const BusinessGeneric = ({ myInfo }: BusinessGenericProp) => {
 
-    return (
-        <>
-            <div>
-                <BusinessInfoData data={myInfo.name}/>
-                <BusinessInfoData data={myInfo.whoiam}/>
-                <BusinessInfoData data={myInfo.lastname}/>
-                <BusinessInfoData data={myInfo.surname}/>
-                
-                <BusinessMyContact data={myInfo.contact}></BusinessMyContact>
-                
-                <BusinessAboutMe data={myInfo.aboutMe}></BusinessAboutMe>
+    console.log("business generic", myInfo)
+    const test = <>
+    <div>
+        <BusinessInfoData data={myInfo.name}/>
+        <BusinessInfoData data={myInfo.whoiam}/>
+        <BusinessInfoData data={myInfo.lastname}/>
+        <BusinessInfoData data={myInfo.surname}/>
+        
+        <BusinessMyContact data={myInfo.contact}></BusinessMyContact>
+        
+        <BusinessAboutMe data={myInfo.aboutMe}></BusinessAboutMe>
 
-            </div>
-        </>
-    )
+    </div>
+</>
+    // return (
+    //     <>
+    //         <div>
+    //             <BusinessInfoData data={myInfo.name}/>
+    //             <BusinessInfoData data={myInfo.whoiam}/>
+    //             <BusinessInfoData data={myInfo.lastname}/>
+    //             <BusinessInfoData data={myInfo.surname}/>
+                
+    //             <BusinessMyContact data={myInfo.contact}></BusinessMyContact>
+                
+    //             <BusinessAboutMe data={myInfo.aboutMe}></BusinessAboutMe>
+
+    //         </div>
+    //     </>
+    // )
+    console.log(test)
+    return test;
 }
 
 export default BusinessGeneric;

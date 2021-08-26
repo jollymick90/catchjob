@@ -1,5 +1,8 @@
+
 import { useState } from "react";
-import resumeSample from "../../../static/sample";
+import { useSelector } from "react-redux";
+import { ResumeState } from "../../../reducers/resumeReducer";
+
 import BasicContainer from "../basic/BasicContainer";
 import BusinessContainer from "../business/BusinessContainer";
 
@@ -8,18 +11,20 @@ export interface ResumeStyleProps {
     children?: React.ReactNode | undefined,
 }
 const ResumeStyle = (props: ResumeStyleProps) => {
+    console.log("render resume")
+    const resState: ResumeState = useSelector((state: any) => state.resume);
 
-    const [resume] = useState(resumeSample);
+    const [ resume ] = useState(resState.resume);
+    console.log("render resume", resume)
 
-
-    let container = <BasicContainer resume={resumeSample} />
-    switch (resume.style.container) {
+    let container = <BasicContainer resume={resume} />
+    switch (resState.resume.style.container) {
         case "business":
-            container = <BusinessContainer resume={resumeSample} />
+            container = <BusinessContainer />
             break;
 
         default:
-            container = <BasicContainer resume={resumeSample} />
+            container = <BasicContainer resume={resume} />
             break;
     }
 
@@ -29,7 +34,6 @@ const ResumeStyle = (props: ResumeStyleProps) => {
                 {
                     container
                 }
-
             </div>
 
         </>

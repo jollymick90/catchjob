@@ -11,7 +11,7 @@ const BusinessJobs = ({ jobs }: BusinessJobsProps) => {
         <>
             <div>
                 {
-                    jobs.map(job => <BusinessJob job={job}></BusinessJob>)
+                    jobs.map((job, i) => <BusinessJob key={`${i.toString()}`} job={job}></BusinessJob>)
                 }
             </div>
         </>

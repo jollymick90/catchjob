@@ -3,16 +3,17 @@ import BusinessSpan from "../commons/BusinessSpan";
 
 export interface BusinessSkillProps {
     children?: React.ReactNode | undefined,
-    skill: MainSkill
+    skill: MainSkill,
+    k?:string
 }
 const BusinessSkill = (props: BusinessSkillProps) => {
 
     return (
         <>
-            <div>                
-                <BusinessSpan>
+            <div key={props.k}>
+                <BusinessSpan key={props.k}>
                     <div className="text-xl font-semibold">{props.skill.name}</div>
-                </BusinessSpan>                
+                </BusinessSpan>
             </div>
             {props.children}
         </>

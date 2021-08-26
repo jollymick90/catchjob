@@ -1,6 +1,6 @@
 import BlogContainer from "../blog/BlogContainer";
 import ResumeStyle from "../layouts/resumestyle/ResumeStyle";
-import { RouteComponent, SwitchRenderRoutes } from "../router/router";
+import { RouteComponent, SwitchRenderRoutes } from "../../router/router";
 import EditContainer from "../worker/EditContainer";
 
 export interface RNavigationProps {

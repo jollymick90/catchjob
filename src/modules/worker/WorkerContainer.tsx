@@ -1,3 +1,4 @@
+import EditGeneric from "./generic/EditGeneric"
 
 export interface WorkerContainerProps {
     children?: React.ReactNode | undefined
@@ -7,7 +8,7 @@ const WorkerContainer = (props: WorkerContainerProps) => {
     return (
         <>
         <div className="h-screen">
-        Ciao ciao ciao ciao
+            <EditGeneric></EditGeneric>
             {props.children}
         </div>
 
