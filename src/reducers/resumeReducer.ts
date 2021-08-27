@@ -14,14 +14,11 @@ const initState: ResumeState =  {
 const resumeReducer = (state = initState, action: Action) => {
     switch(action.type) {
         case "UPDATE":
-            debugger
-
             const result = {
                 ...state,
                 resume: { ...action.payload }
                 
             }
-            console.log(result)
             return result
         default:
             return state;

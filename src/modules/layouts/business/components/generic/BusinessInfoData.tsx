@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { SDNumber, SDString } from "../../../../../models/Generic";
 import PrivContainer from "../../../../web-components/privacy/PrivContainer";
 
@@ -12,14 +11,25 @@ export interface BusinessInfoDataProps {
 
 const BusinessInfoData = (props: BusinessInfoDataProps) => {
 
-    const [data] = useState((props.data && typeof props.data === "object") ? props.data.value : props.data);
-    
     const dataNoState = (props.data && typeof props.data === "object") ? props.data.value : props.data;
-    console.log("BusinessInfoData", data, dataNoState)
+    
+    let show = true;
+    
+    const isHide = () => {
+        if ((props.data && typeof props.data === "object")) {
+            const data = props.data as SDString | SDNumber
+            show = data.hide !== true;
+        } else {
+            show = true;
+        }
+    }
+
+    isHide();
 
     return (
         <>
             {
+                show ? 
                 <PrivContainer data={dataNoState}>
                     <div className="border-2 border-gray-200 ">
                         {
@@ -27,6 +37,7 @@ const BusinessInfoData = (props: BusinessInfoDataProps) => {
                         }
                     </div>
                 </PrivContainer>
+                : <></>
             }
         </>
     )

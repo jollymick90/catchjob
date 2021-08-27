@@ -11,14 +11,14 @@ export interface ResumeStyleProps {
     children?: React.ReactNode | undefined,
 }
 const ResumeStyle = (props: ResumeStyleProps) => {
-    console.log("render resume")
     const resState: ResumeState = useSelector((state: any) => state.resume);
 
     const [ resume ] = useState(resState.resume);
-    console.log("render resume", resume)
 
     let container = <BasicContainer resume={resume} />
+    
     switch (resState.resume.style.container) {
+
         case "business":
             container = <BusinessContainer />
             break;
